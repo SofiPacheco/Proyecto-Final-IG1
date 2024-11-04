@@ -11,7 +11,7 @@ h1, h2{
 
 p{
     font-family: "Playfair Display", serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .navbar {
@@ -55,10 +55,4 @@ p{
     text-align: center;
   }
 
-  .container{
-    font-size: 17px; 
-  }
-
-  iframe{
-    align-items: center;
-  }
+  

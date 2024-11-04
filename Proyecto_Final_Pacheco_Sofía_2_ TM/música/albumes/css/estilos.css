@@ -3,15 +3,20 @@ header h1{
     text-align: center;
     font-size: 80px;
 }
-h1, h2{
+h1{
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+}
+
+h2{
     font-family: "Playfair Display", serif;
     text-align: center;
-    font-size: 80px;
+    font-size: 25px;
 }
 
 p{
     font-family: "Playfair Display", serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .navbar {
@@ -55,10 +60,4 @@ p{
     text-align: center;
   }
 
-  .container{
-    font-size: 17px; 
-  }
-
-  iframe{
-    align-items: center;
-  }
+  

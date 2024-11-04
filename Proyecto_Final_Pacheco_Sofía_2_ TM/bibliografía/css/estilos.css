@@ -55,6 +55,17 @@ p{
     text-align: center;
   }
 
+.uno {
+    /* background-image: url(../img/fondopp.jpg); */
+    background-color: #a31414ce;
+    color: #fff8f3;
+  }
+
+.tres{
+    background-color: #a31414ce;
+    color: #fff8f3;
+}
+
   .container{
     font-size: 17px; 
   }
