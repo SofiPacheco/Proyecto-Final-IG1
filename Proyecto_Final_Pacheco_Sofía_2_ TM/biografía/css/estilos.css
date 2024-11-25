@@ -1,0 +1,173 @@
+/* Estilo para el encabezado */
+header h1 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 80px;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 80px;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 4rem;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para el pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+footer p {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Sección .uno y .tres con fondo y texto centrado */
+.dos, .cuatro {
+  background-color: #a31414ce;
+  color: #fff8f3;
+}
+
+/* Estilo para el contenedor */
+.container {
+  font-size: 17px;
+}
+
+/* Estilo para los iframes */
+iframe {
+  align-items: center;
+}
+
+/* Asegurarse de que las imágenes en dispositivos móviles ocupen todo el ancho */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 480px) {
+  /* Centrar textos */
+  body{
+    width: 100%;
+  }
+  h1, h2, p {
+      text-align: center;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  /* Asegurarse de que las imágenes ocupen todo el ancho en móviles */
+  .uno img, .dos img, .tres img, .cuatro img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* Centrar el texto de las fechas y números en una sola fila */
+  .col-md-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+
+  .col-md-2 h2 {
+      margin: 0 10px;
+      font-size: 20px;
+  }
+
+  /* Ajustar las columnas de las secciones para que estén en fila */
+  .uno .row, .dos .row, .tres .row, .cuatro .row {
+      flex-direction: column !important;
+      text-align: center;
+  }
+
+  /* Asegurar que las fechas estén en fila */
+  .uno .col-md-2, .dos .col-md-2, .tres .col-md-2, .cuatro .col-md-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+
+  /* Ajustar tamaños de texto */
+  h1 {
+      font-size: 50px;
+      padding-bottom: -20px;
+  }
+
+  h2 {
+      font-size: 22px;
+      padding-top: -20px;
+      padding-bottom: -20px;
+  }
+
+  p {
+      font-size: 16px;
+      padding-top: -20px;
+  }
+
+  .tres {
+    padding: 20px;
+}
+
+/* Centrar texto y las imágenes */
+.tres h1, .tres p {
+    text-align: center;
+}
+
+.tres img {
+   align-items: center;
+    width: 100%; /* Asegurarse de que la imagen no sea más ancha que el contenedor */
+    padding-right: 30px;
+}
+
+.tres {
+  margin-right: 100px;
+  width: 100%;
+}
+
+.parrafoizq {
+  margin-right: 50px;
+}
+}

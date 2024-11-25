@@ -9,9 +9,13 @@ h1, h2{
     font-size: 80px;
 }
 
+h2{
+    font-size: 100px;
+}
+
 p{
     font-family: "Playfair Display", serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .navbar {
@@ -54,5 +58,90 @@ p{
     font-size: 14px; /* Tamaño de fuente más pequeño */
     text-align: center;
   }
+/* versión Mobile */
+@media (max-width: 480px) {
+    body {
+        text-align: center; /* Centrar texto */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
 
-  
+    /* Ajustar contenedores */
+    .container, .row {
+        margin: 0 auto; /* Centrar el contenedor */
+        padding: 0;
+    }
+
+    /* Imágenes y videos al 100% del ancho */
+    img, iframe {
+        width: 100%; /* Ocupan todo el ancho */
+        height: auto; /* Mantienen la proporción */
+        display: block; /* Asegura que no se comporten como inline */
+        margin: 0 auto; /* Centra las imágenes y videos */
+    }
+
+    iframe{
+        height: 300px;
+    }
+
+    img{
+        padding-top: -30px;
+        padding-bottom: -50px;
+    }
+
+    /* Botones más anchos y centrados */
+    .btn, a.btn {
+        display: block;
+        margin: 10px auto;
+        width: 90%; /* Botones ocupan casi todo el ancho */
+    }
+
+    /* Centrando encabezados y párrafos */
+    h1, h2, p {
+        text-align: center;
+        margin: 15px auto;
+    }
+
+    /* Encabezados con márgenes específicos */
+    h2 {
+        padding-top: -20px;
+        padding-bottom: -30px;
+    }
+
+    /* Ajustar fuente para párrafos */
+    p {
+        font-size: 15px; /* Tamaño de fuente más pequeño */
+        padding-bottom: -20px;
+    }
+
+    /* Anulando flotados en dispositivos pequeños */
+    .float-end {
+        float: none !important; /* Desactiva flotados en mobile */
+        margin: 0 auto;
+    }
+}
+
+/* ESTILOS PÁGINA DESARROLLADORES */
+    #descripcion{
+    font-size: 17px;
+}
+
+    #duda{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+    .mb-4 text-center{
+    text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        #imgSofi{
+            margin-bottom: 20px;
+        }
+
+        #descripcion, #duda{
+            font-size: 15px;
+        }
+    }

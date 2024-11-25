@@ -1,0 +1,17 @@
+Este sitio web va a ser exclusivamente un sitio de información acerca de la artista Mon Lafaerte. Va a estar destinada a toda aquella persona que desee conocer todo sobre ella, desde su infancia hasta sus grandes aficiones en la vida. Estará destinado a personas que se interesen en la artista tanto por su mismo arte como por su vida misma y sus pesares.
+Mon Lafaerte no posee página oficial más que para sus ventas, por lo que toda la información la sacaré de Wikipedia, de su página de artes visuales, y de las noticias que aparecen en Wikipedia que poseen notas de Mon.
+
+Estéticamente, tengo en mente una página con colores bordós, negros y dorados, cuyos fondos sean fotografías de la artista, sus premios, sus dibujos y más. Será una página que atrape visualmente al espectador con un estilo MAXIMALISTA (contrario a minimalista).
+La página tendrá cuatro partes principales: Mon Lafaerte INICIO, BIOGRAFÍA(infancia/la dura relación con su padre y cómo la inspiró artísticamente), MÚSICA (que tendrá como subsecciones --> ÁLBUMES Y PREMIOS), NOVEDADES(información actual de ella), CONTACTO, DESARROLLO. 
+
+Mi idea es que sea un sitio web completo. Si bien es muy abarcativo ya que es sobre la artista en GENERAL, busco que el espectador quede satisfecho con la información breve que habrá sobre cada uno de estos temas. No podré profundizar en todos ya que tanto la artista como su historia de vida, artística, y musical es muy extensa. Pienso saldar esto con botones que lleven a más información y que ayuden a profundizar en los temas que el espectador desee (por ejemplo información de cada álbum y el contenido), además de sumar por cada página videos que transmitan emotividad, que den un clima a cada página. Es por eso que estétícamente cada página será un poco distinta en cuanto a los fondos. 
+
+ACTUALIZACIÓN.
+Me voy a basar a nivel diseño en lo que es la página de Luis Miguel:
+https://luismigueloficial.com. Tiene muchísimo contenido, interesante, lleno de fotografías y atrapante. Los colores y el estilo los dejaré de lado. Me gustó la disposición y la estructuración de su página.
+También tomaré de ejemplo la galería de la página oficial de Roger Waters
+https://rogerwaters.com/gallery/.
+
+Saqué información de esta página:
+https://www.vogue.mx/estilo-de-vida/articulo/mon-laferte-biografia-de-la-cantante-chilena-feminista-quien-es
+https://somosruidosa.com/lee/mon-laferte-arte/ (sección pintura)
