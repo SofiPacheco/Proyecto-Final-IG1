@@ -9,16 +9,71 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- CSS -->
+        <!-- CSS Base PRIMERO -->
         <link rel="stylesheet" href="css/estilos.css">
+        <!-- Bootstrap DESPUÉS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Íconos en Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <style>
+            .art-card {
+                position: relative;
+                margin: 0 10px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                overflow: hidden;
+                border-radius: 8px;
+            }
+            .art-card:hover {
+                transform: scale(1.02);
+            }
+            .art-card img {
+                transition: filter 0.3s ease;
+            }
+            .art-card:hover img {
+                filter: brightness(0.4);
+            }
+            .art-card-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.3);
+                color: white;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .art-card:hover .art-card-content {
+                opacity: 1;
+            }
+            .art-title {
+                color: white;
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            .art-card-content p {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+                text-align: justify;
+                line-height: 1.4;
+            }
+            .art-card-content .btn {
+                align-self: center;
+                font-size: 0.8rem;
+            }
+        </style>
     </head>
 
     <body>
-        <img class="fondo-imagen" src="img/inicio/fondo_uno.jpg" alt="Fondo de museo" width="1000">
+        <img class="fondo-imagen" src="img/inicio/fondo_uno.jpg" alt="Fondo de museo">
 
-        <!-- Menú de Navegación fijo -->
         <header>
             <nav class="navbar navbar-expand-lg mi-nav">
                 <div class="container-fluid">
@@ -50,153 +105,170 @@
                                 </ul>
                             </li>
                             <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="renacimiento-barroco/index.html">Renacimiento y Barroco</a>
+                            </li>
+                            <li class="nav-item mi-nav-item">
                                 <a class="nav-link mi-nav-link" href="neoclasicismo-romanticismo/index.html">Neoclasicismo y Romanticismo</a>
                             </li>
                             <li class="nav-item mi-nav-item">
-                                <a class="nav-link mi-nav-link" href="impresionismo-postimpresionismo/index.html">Impresionismo y Postimpresionismo</a>
+                                <a class="nav-link mi-nav-link" href="impresionismo-postimpresionismo/index.html">Impresionismo</a>
                             </li>
                             <li class="nav-item mi-nav-item dropdown">
                                 <a class="nav-link mi-nav-link dropdown-toggle" href="arte-moderno-contemporaneo/" role="button" data-bs-toggle="dropdown">
-                                    Arte Contemporáneo
+                                    Contemporáneo
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="arte-moderno-contemporaneo/cubismo/index.html">Cubismo</a></li>
                                     <li><a class="dropdown-item" href="arte-moderno-contemporaneo/arte-digital/index.html">Arte digital</a></li>
                                 </ul>
                             </li>
+                            <li class="nav-item mi-nav-item">
+                                <div class="icon-with-text-gallery">
+                                    <a class="nav-link text-white pt-2" href="galería/index.html" aria-label="Galería">
+                                        <i class="bi bi-image icon-size"></i>
+                                    </a>
+                                    <span class="icon-text-gallery">Galería</span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
-            <!-- Encabezado fijo-->
             <div class="header-content">
                 <div class="header-title-container">
-                    <img src="img/inicio/logo_arteuniversal.png" alt="Logo ArteUniversal" width="500">
+                    <a href="index.html">
+                        <img src="img/inicio/logo_arteuniversal.png" alt="Logo ArteUniversal">
+                    </a>
                 </div>
                 <div class="header-buttons">
-                    <a href="contacto.html" class="btn btn-outline-light">CONTACTO</a>
-                    <a href="desarrollo.html" class="btn btn-outline-light">DESARROLLO</a>
+                    <div class="icon-with-text">
+                        <a href="contacto.html" class="btn btn-outline-light" aria-label="Contacto">
+                            <i class="bi bi-envelope icon-size"></i>
+                        </a>
+                        <span class="icon-text">Contacto</span>
+                    </div>
+                    <div class="icon-with-text">
+                        <a href="desarrollo.html" class="btn btn-outline-light" aria-label="Desarrollo">
+                            <i class="bi bi-tools icon-size"></i>
+                        </a>
+                        <span class="icon-text">Desarrollo</span>
+                    </div>
                 </div>
             </div>
         </header>
 
-        <!-- Contenido variable-->
         <main>
-            <h1 class="mt-5 mb-3">El Arte: La Huella Eterna de la Humanidad</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 mt-5 mb-4">
-                        <p>Desde los primeros trazos en las cavernas hasta las luces neón del arte digital, la humanidad ha dejado su marca a través de la creatividad. El arte no es solo belleza; es testigo de batallas, revoluciones, creencias y emociones que han dado forma a nuestra historia. Cada pintura, cada escultura y cada arquitectura esconden los secretos de su tiempo, sus miedos, sus esperanzas y sus sueños.</p>
-                        <p>¿Qué llevó a los artistas medievales a construir catedrales que desafían la gravedad? ¿Cómo logró un solo pincel cambiar la percepción del mundo en el Renacimiento? ¿Por qué los impresionistas rompieron con siglos de tradición para capturar la luz en movimiento?</p>
-                        <p>Este viaje a través del arte es mucho más que un recorrido visual: es un portal a las civilizaciones que nos precedieron. Explora, descubre y adéntrate en la historia universal a través de sus expresiones más impactantes. Porque entender el arte es entender quiénes somos.
-                        </p> 
+            <section class="container my-5">
+                <h1 class="text-center mb-4">El Arte: La Huella Eterna de la Humanidad</h1>
+                <p class="text-center" style="font-size: 1.2rem; text-align: justify;">Desde los primeros trazos en las cavernas hasta las luces neón del arte digital, la humanidad ha dejado su marca a través de la creatividad. El arte no es solo belleza; es testigo de batallas, revoluciones, creencias y emociones que han dado forma a nuestra historia.</p>
+                <p class="text-center" style="font-size: 1.2rem; text-align: justify;">¿Qué llevó a los artistas medievales a construir catedrales que desafían la gravedad? ¿Cómo logró un solo pincel cambiar la percepción del mundo en el Renacimiento? ¿Por qué los impresionistas rompieron con siglos de tradición para capturar la luz en movimiento? Este viaje a través del arte es mucho más que un recorrido visual: es un portal a las civilizaciones que nos precedieron.</p>
+            </section>
+
+            <section class="container my-5">
+                <h2 class="text-center mb-4">La Huella Eterna de la Humanidad</h2>
+                <p class="text-center" style="font-size: 1.1rem; text-align: justify;">Desde los primeros trazos en las cavernas hasta las luces del arte digital de nuestra actualidad, la humanidad ha dejado su marca histórica, social y cultural a través de la creatividad artística. Las obras artísticas creadas a lo largo de los siglos han generado un impacto de tal magnitud que comenzaron a ser nombradas las diversas eras artísticas.</p>
+                <br>
+
+                <div id="artCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center">
+                                <div class="art-card" onclick="window.location.href='arte-primitivo/arte-prehistorico/index.html'">
+                                    <img src="img/inicio/arte_prehistorico.jpg" alt="Arte Prehistórico" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Arte Prehistórico</h3>
+                                        <p>Expresión temprana de la humanidad a través de pinturas rupestres, esculturas y grabados en piedra. Representaba escenas de caza, rituales y figuras simbólicas, reflejando creencias y la vida cotidiana de las primeras civilizaciones.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                                <div class="art-card" onclick="window.location.href='arte-primitivo/arte-antiguo/index.html'">
+                                    <img src="img/inicio/arte_antiguo.jpeg" alt="Arte Antiguo" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Arte Antiguo</h3>
+                                        <p>Floreció en civilizaciones como Egipto, Grecia y Roma. Se caracteriza por su monumentalidad, idealización de la figura humana y desarrollo de técnicas como la escultura en mármol y la pintura mural.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                                <div class="art-card" onclick="window.location.href='arte-medieval/arte-romanico/index.html'">
+                                    <img src="img/inicio/arte_romanico.jpg" alt="Arte Románico" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Arte Románico</h3>
+                                        <p>Primer gran estilo de la Edad Media, caracterizado por su arquitectura robusta, iglesias con arcos de medio punto y decoración escultórica y pictórica con fuerte simbolismo religioso.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <div class="art-card" onclick="window.location.href='arte-medieval/arte-gotico/index.html'">
+                                    <img src="img/inicio/arte_gotico.jpg" alt="Arte Gótico" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Arte Gótico</h3>
+                                        <p>Evolución del románico, destaca por sus catedrales con arcos apuntados, vitrales coloridos y esculturas más realistas. Refleja la espiritualidad y el auge de las ciudades en la Baja Edad Media.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                                <div class="art-card" onclick="window.location.href='renacimiento-barroco/index.html'">
+                                    <img src="img/inicio/arte_barroco.jpg" alt="Renacimiento y Barroco" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Renacimiento y Barroco</h3>
+                                        <p>El Renacimiento marcó un renacer del arte clásico con un enfoque en la perspectiva y el realismo. El Barroco, por otro lado, se caracterizó por su dramatismo, movimiento y exuberancia, buscando evocar emociones intensas.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                                <div class="art-card" onclick="window.location.href='neoclasicismo-romanticismo/index.html'">
+                                    <img src="img/inicio/arte_neoclasicista.jpg" alt="Neoclasicismo y Romanticismo" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Neoclasicismo y Romanticismo</h3>
+                                        <p>Mientras el neoclasicismo retomó la armonía y el orden del arte grecolatino con un enfoque racional, el romanticismo apostó por la emoción, la imaginación y la libertad creativa, inspirándose en la naturaleza, lo exótico y lo sublime.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <div class="art-card" onclick="window.location.href='impresionismo-postimpresionismo/index.html'">
+                                    <img src="img/inicio/arte_impresionista.jpg" alt="Impresionismo" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Impresionismo</h3>
+                                        <p>El impresionismo revolucionó el arte con pinceladas sueltas y la captura de la luz en escenas cotidianas. El postimpresionismo, aunque heredó su técnica, exploró nuevas formas de expresión con mayor subjetividad y experimentación en el color y la composición.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                                <div class="art-card" onclick="window.location.href='arte-moderno-contemporaneo/cubismo/index.html'">
+                                    <img src="img/inicio/arte_cubista.jpg" alt="Cubismo" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Cubismo</h3>
+                                        <p>Movimiento de vanguardia que rompió con la representación tradicional, fragmentando la realidad en formas geométricas y explorando múltiples perspectivas simultáneamente.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                                <div class="art-card" onclick="window.location.href='arte-moderno-contemporaneo/arte-digital/index.html'">
+                                    <img src="img/inicio/arte_digital.jpg" alt="Arte Digital" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                                    <div class="art-card-content">
+                                        <h3 class="art-title">Arte Digital</h3>
+                                        <p>Expresión artística que utiliza tecnologías digitales como herramientas creativas. Abarca desde la pintura digital y la escultura 3D hasta el arte generativo y las instalaciones interactivas.</p>
+                                        <button class="btn btn-primary btn-sm">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 mt-5 mb-4">
-                        <img src="img/inicio/lahuella.jpg" width="400" height="500" alt="Imagen representativa del arte">
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#artCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#artCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 m5-5 mb-4">
-                        Arte Prehistórico 🏺
-                        Expresión temprana de la humanidad a través de pinturas rupestres, esculturas y grabados en piedra. Representaba escenas de caza, rituales y figuras simbólicas, reflejando creencias y la vida cotidiana de las primeras civilizaciones.
-
-                        Arte Medieval ⛪
-                        Influenciado por la religión, el arte medieval abarca desde el arte románico hasta el gótico. Se caracteriza por su simbolismo, mosaicos, vitrales y arquitectura monumental, con iglesias y catedrales imponentes que reflejan la espiritualidad de la época.
-
-                        Neoclasicismo y Romanticismo 🎭
-                        Mientras el neoclasicismo retomó la armonía y el orden del arte grecolatino con un enfoque racional, el romanticismo apostó por la emoción, la imaginación y la libertad creativa, inspirándose en la naturaleza, lo exótico y lo sublime.
-
-                        Impresionismo y Postimpresionismo 🎨
-                        El impresionismo revolucionó el arte con pinceladas sueltas y la captura de la luz en escenas cotidianas. El postimpresionismo, aunque heredó su técnica, exploró nuevas formas de expresión con mayor subjetividad y experimentación en el color y la composición.
-
-                        Arte Contemporáneo 🖼️
-                        Una exploración sin límites de técnicas y conceptos, desde el cubismo y el surrealismo hasta el arte digital y la instalación. Rompe con las normas tradicionales y refleja los cambios sociales, políticos y tecnológicos del mundo actual.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carrousell responsive -->
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..."><div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..."><div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..."><div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..."><div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..."><div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..."><div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-
+            </section>
         </main>
 
-        <!-- Pie de página fijo-->
         <footer class="mt-5">
             <address>
                 <p>Página oficial de La Historia del Arte. Para contactarse escribir a <a href="mailto:historiadelarte@gmail.com">historiadelarte@gmail.com</a></p>
@@ -206,6 +278,6 @@
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+        <script src="js/script.js"></script>
     </body>
 </html>
