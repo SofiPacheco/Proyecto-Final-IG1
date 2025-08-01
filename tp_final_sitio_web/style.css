@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Quicksand', Arial, sans-serif;
+    background: url('../img/fondo_juego.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* Elimina overflow: hidden y height: 100vh */
+}
+
+h1, .game-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #2d2d2d;
+}
+
+.game-subtitle {
+    font-size: 1.2rem;
+    font-family: 'Quicksand', sans-serif;
+    color: #444;
+}
+
+.game-description p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.play-button, .home-button {
+    font-size: 1.2rem;
+    padding: 0.7em 2em;
+    border-radius: 8px;
+}
+
+.main-footer {
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    position: static;
+    width: 100%;
+}
+
+.main-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.puzzle-grid, .pieces-container {
+    margin: 0 auto;
+}
+
+.game-frame {
+    margin: 0 auto 2rem auto;
+    background: #fff;
+    border: 16px solid #8B5C2A;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 20px;
+    max-width: 900px;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-grid {
+    background: #fff;
+    border-radius: 8px;
+    min-height: 400px;
+    min-width: 600px;
+    position: relative;
+}
+
+.pieces-container {
+    margin-top: 2rem;
+    min-height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Pantalla de inicio */
+.intro-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Cambiado para que el contenido fluya hacia abajo */
+  align-items: center;
+  width: 100%;
+  min-height: 60vh;
+  padding-top: 80px; /* Espacio para el nav */
+  padding-bottom: 60px; /* Espacio para el footer */
+}
+
+.intro-content {
+  max-width: 800px;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .game-frame, .puzzle-grid {
+        min-width: 90vw;
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 768px) {
+  .intro-content {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .game-title {
+    font-size: 2.5rem;
+  }
+
+  .game-subtitle {
+    font-size: 1rem;
+  }
+
+  .game-description {
+    font-size: 1rem;
+  }
+
+  .game-frame {
+    width: 400px;
+    height: 320px;
+    padding: 40px;
+  }
+
+  .home-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .game-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .game-description {
+    font-size: 0.9rem;
+  }
+
+  .game-frame {
+    width: 320px;
+    height: 256px;
+    padding: 32px;
+  }
+
+  .play-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+}
