@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Arte Antiguo </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/estilos.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <style>
+        main p {
+            font-size: 1.15rem;
+        }
+        .bloque-arte {
+            min-height: 300px;
+        }
+        .bloque-arte .col-md-6 {
+            display: flex;
+            align-items: stretch;
+            padding: 0;
+        }
+        .bloque-arte .texto-bloque {
+            background: none;
+            padding: 0 2rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            font-size: 1.05rem;
+            box-shadow: none;
+        }
+        .bloque-arte .img-bloque {
+            width: 100%;
+            object-fit: cover;
+            min-height: 220px;
+            max-height: 340px;
+            height: 100%;
+        }
+        .tecnica-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .tecnica-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+        }
+        .tecnica-card p {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            color: #fff;
+        }
+        .tecnicas-materiales-separador {
+            margin-bottom: 2rem;
+        }
+    </style>
+
+    <body>
+        <img class="fondo-imagen" src="../../img/arte-primitivo/fondo_antiguo.jpg" alt="Fondo de pintura antigua" width="1000">
+
+        <header>
+            <nav class="navbar navbar-expand-lg mi-nav">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../../index.html"></a>
+                    <button class="navbar-toggler mi-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mi-navbar-nav">
+                            <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="../../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item mi-nav-item dropdown">
+                                <a class="nav-link mi-nav-link dropdown-toggle" href="../index.html" role="button" data-bs-toggle="dropdown">
+                                    Arte Primitivo
+                                </a>
+                                <ul class="dropdown-menu" data-bs-auto-close="outside">
+                                    <li><a class="dropdown-item" href="../arte-prehistorico/index.html">Arte prehistórico</a></li>
+                                    <li><a class="dropdown-item active" href="index.html" aria-current="page">Arte antiguo</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mi-nav-item dropdown">
+                                <a class="nav-link mi-nav-link dropdown-toggle" href="../../arte-medieval/" role="button" data-bs-toggle="dropdown">
+                                    Arte Medieval
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../../arte-medieval/arte-romanico/index.html">Arte románico</a></li>
+                                    <li><a class="dropdown-item" href="../../arte-medieval/arte-gotico/index.html">Arte gótico</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="../../renacimiento-barroco/index.html"> Renacimiento y Barroco </a>
+                            </li>
+                            <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="../../neoclasicismo-romanticismo/index.html">Neoclasicismo y Romanticismo</a>
+                            </li>
+                            <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="../../impresionismo-postimpresionismo/index.html">Impresionismo</a>
+                            </li>
+                            <li class="nav-item mi-nav-item dropdown">
+                                <a class="nav-link mi-nav-link dropdown-toggle" href="../../arte-moderno-contemporaneo/" role="button" data-bs-toggle="dropdown">
+                                   Contemporáneo
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../../arte-moderno-contemporaneo/cubismo/index.html">Cubismo</a></li>
+                                    <li><a class="dropdown-item" href="../../arte-moderno-contemporaneo/arte-digital/index.html">Arte digital</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mi-nav-item">
+                                <div class="icon-with-text-gallery">
+                                    <a class="nav-link text-white pt-2" href="../../galería/index.html" aria-label="Galería">
+                                        <i class="bi bi-image icon-size"></i>
+                                    </a>
+                                    <span class="icon-text-gallery">Galería</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>         
+
+            <div class="header-content">
+                <div class="header-title-container">
+                    <img src="../../img/inicio/logo_arteuniversal.png" alt="Logo">
+                </div>
+                <div class="header-buttons">
+                    <div class="icon-with-text">
+                        <a href="../contacto.html" class="btn btn-outline-light" aria-label="Contacto">
+                            <i class="bi bi-envelope icon-size"></i>
+                        </a>
+                        <span class="icon-text">Contacto</span>
+                    </div>
+                    <div class="icon-with-text">
+                        <a href="../desarrollo.html" class="btn btn-outline-light" aria-label="Desarrollo">
+                            <i class="bi bi-tools icon-size"></i>
+                        </a>
+                        <span class="icon-text">Desarrollo</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container my-5">
+                <h1 class="text-center mb-1">Arte Antiguo</h1>
+                <h2>El Esplendor de las Primeras Civilizaciones</h2>
+                <p class="text-center mb-4">El Arte Antiguo, que se desarrolla desde la invención de la escritura hasta la caída del Imperio Romano de Occidente, es un testimonio del ingenio y la creatividad de las primeras civilizaciones. Este arte, que abarca un amplio abanico de culturas y estilos, nos permite conocer su historia, sus creencias y sus valores.</p>
+    
+                <section class="mt-5">
+                    <h2 class="mb-4">Egipto: La Grandeza de los Faraones (aprox. 3.100 - 30 a. C.)</h2>
+                    <div class="row bloque-arte g-0">
+                        <div class="col-md-6">
+                            <div class="texto-bloque">
+                                <p>El arte egipcio, marcado por su monumentalidad y su simbolismo, se caracteriza por su conexión con la religión y el poder del faraón. <br> La arquitectura egipcia, con sus pirámides, templos y obeliscos, son un gran ejemplo de la grandiosidad y la habilidad técnica de esta civilización. <br> La escultura egipcia, con sus figuras de dioses y faraones, se caracteriza por su estilo hierático y simbólico. <br> La pintura egipcia, que decora tumbas y templos, nos muestra escenas de la vida cotidiana y el más allá.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../../img/arte-primitivo/arte_egipcio.avif" alt="Arte Egipcio" class="img-bloque">
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="mt-5">
+                    <h2 class="mb-4">Mesopotamia: La Cuna de la Civilización (3.500 - 539 a.C.)</h2>
+                    <div class="row bloque-arte g-0">
+                        <div class="col-md-6 order-md-2">
+                            <div class="texto-bloque text-end">
+                                <p>El arte mesopotámico, que se desarrolla en la región entre los ríos Tigris y Éufrates, se caracteriza por su diversidad y su realismo. La arquitectura mesopotámica, con sus zigurats y palacios, es un ejemplo de la habilidad de esta civilización para construir grandes edificios con adobe. La escultura mesopotámica, con sus figuras de reyes y dioses, se caracteriza por su expresividad y su realismo. El relieve mesopotámico, que decora muros y edificios, nos muestra escenas de guerra, caza y rituales.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <img src="../../img/arte-primitivo/arte_mesopotámico.jpg" alt="Arte Mesopotámico" class="img-bloque">
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="mt-5">
+                    <h2 class="mb-4">Grecia: La Cuna de la Cultura Occidental (1.200 - 146 a. C.)</h2>
+                    <div class="row bloque-arte g-0">
+                        <div class="col-md-6">
+                            <div class="texto-bloque">
+                                <p>El arte griego, que se desarrolla en la antigua Grecia, se caracteriza por su idealismo y su búsqueda de la belleza y la perfección. La arquitectura griega, con sus templos y edificios públicos, es un ejemplo de la armonía y la proporción que caracterizan a esta civilización. La escultura griega, con sus figuras humanas, se caracteriza por su naturalismo y su idealismo. La cerámica griega, que decora vasijas y otros objetos, nos muestra escenas mitológicas y de la vida cotidiana.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../../img/arte-primitivo/arte_griego.jpg" alt="Arte Griego" class="img-bloque">
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="mt-5">
+                    <h2 class="mb-4">Roma: El Imperio de la Belleza (aprox. 753 a. C. - 476 d. C.)</h2>
+                    <div class="row bloque-arte g-0">
+                        <div class="col-md-6 order-md-2">
+                            <div class="texto-bloque text-end">
+                                <p>El arte romano, que se desarrolla en la antigua Roma, se caracteriza por su realismo y su función propagandística. La arquitectura romana, con sus anfiteatros, acueductos y termas, es un ejemplo de la habilidad de esta civilización para construir grandes obras públicas. <br> La escultura romana, con sus retratos y relieves, se caracteriza por su realismo y su detalle. La pintura romana, que decora muros y mosaicos, nos muestra escenas históricas y mitológicas.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <img src="../../img/arte-primitivo/arte_romano.avif" alt="Arte Romano" class="img-bloque">
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="mt-5">
+                <h2 class="mb-4">Técnicas y Materiales</h2>
+                <p class="tecnicas-materiales-separador">
+                    Las técnicas y los materiales utilizados en el arte antiguo variaban según la civilización y la época. En Egipto, se utilizaban materiales como la piedra, el adobe y el oro para construir pirámides, templos y otros monumentos. En Mesopotamia, se utilizaba el adobe para construir zigurats y palacios. En Grecia, se utilizaban materiales como el mármol y el bronce para crear templos y figuras humanas de gran belleza y perfección. En Roma, se construyeron grandes obras de ingeniería como anfiteatros, acueductos y termas, y se utilizaron materiales como el mármol, el hormigón y el ladrillo.
+                </p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="tecnica-card h-100">
+                            <img src="../../img/arte-primitivo/herramienta_egipto.jpg" alt="Egipto">
+                            <p>Herramientas utilizadas en Egipto</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tecnica-card h-100">
+                            <img src="../../img/arte-primitivo/tabla_mesopotamica.jpg" alt="Mesopotamia">
+                            <p>Tabla de arcilla de la Mesopotamia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 mt-0">
+                    <div class="col-md-6">
+                        <div class="tecnica-card h-100">
+                            <img src="../../img/arte-primitivo/pintura_grecia.jpeg" alt="Grecia">
+                            <p>Pintura de la antigüa Grecia</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tecnica-card h-100">
+                            <img src="../../img/arte-primitivo/arquitectura_roma.jpg" alt="Roma">
+                            <p>Arquitectura romana</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+                <section class="mt-5">
+                    <h2 class="mb-4">Significado y Función</h2>
+                    <p>El significado y la función del arte antiguo variaban según la civilización y la época. En Egipto, el arte estaba al servicio de la religión y el poder del faraón. En Mesopotamia, el arte se utilizaba para representar a los dioses y a los reyes, así como para narrar escenas de guerra, caza y rituales. En Grecia, el arte se centraba en la representación de la figura humana, con un estilo idealizado y naturalista. En Roma, el arte se utilizaba para glorificar al Imperio y a sus emperadores.</p>
+                </section>
+    
+                <section class="mt-5">
+                    <h2 class="mb-4">Descubrimiento y Estudio</h2>
+                    <p>El arte antiguo fue estudiado y admirado por las civilizaciones posteriores, especialmente por los romanos, que copiaron y adaptaron muchas de sus formas y estilos. Sin embargo, el conocimiento que tenemos sobre el arte antiguo se ha ido ampliando gracias a los descubrimientos arqueológicos de los siglos XIX y XX. El estudio del arte antiguo nos permite conocer la historia, la cultura y los valores de las primeras civilizaciones, así como su legado a la humanidad.</p>
+                </section>
+    
+                <section class="mt-5">
+                    <h4>El arte antiguo es un tesoro invaluable que nos permite conocer nuestros orígenes y nuestra historia. Este arte, que se extiende a lo largo de milenios, nos invita a reflexionar sobre la creatividad humana y sobre la importancia del arte en la cultura y la sociedad.</h4>
+                </section>
+            </div>
+        </main>
+
+        <footer class="mt-5">
+            <address>
+                <p>Página oficial de La Historia del Arte. Para contactarse escribir a <a href="mailto:historiadelarte@gmail.com">historiadelarte@gmail.com</a></p>
+                <p>&copy; 2025. Todos los derechos reservados.</p>
+            </address>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

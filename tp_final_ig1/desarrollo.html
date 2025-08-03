@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Desarrollo </title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/estilos.css">
+        <!-- Íconos en Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <style>
+            /* --- ESTILOS PARA LA PÁGINA DE DESARROLLO --- */
+.desarrollo-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.desarrollo-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.desarrollo-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.desarrollo-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .desarrollo-content {
+        padding: 1.5rem;
+    }
+    .desarrollo-title {
+        font-size: 1.8rem;
+    }
+    .desarrollo-text {
+        font-size: 1rem;
+    }
+}
+        </style>
+    </head>
+
+    <body>
+        <img class="fondo-imagen" src="img/fondo_desarrollo.webp" alt="Fondo de desarrollo" width="1000">
+
+        <!-- Menú de Navegación fijo -->
+        <header>
+            <nav class="navbar navbar-expand-lg mi-nav">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"></a>
+                    <button class="navbar-toggler mi-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mi-navbar-nav">
+                            <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item mi-nav-item dropdown">
+                                <a class="nav-link mi-nav-link dropdown-toggle" href="arte-primitivo/index.html" role="button" data-bs-toggle="dropdown">
+                                    Arte Primitivo
+                                </a>
+                                <ul class="dropdown-menu" data-bs-auto-close="outside">
+                                    <li><a class="dropdown-item" href="arte-primitivo/arte-prehistorico/index.html">Arte prehistórico</a></li>
+                                    <li><a class="dropdown-item" href="arte-primitivo/arte-antiguo/index.html">Arte antiguo</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mi-nav-item dropdown">
+                                <a class="nav-link mi-nav-link dropdown-toggle" href="arte-medieval/" role="button" data-bs-toggle="dropdown">
+                                    Arte Medieval
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="arte-medieval/arte-romanico/index.html">Arte románico</a></li>
+                                    <li><a class="dropdown-item" href="arte-medieval/arte-gotico/index.html">Arte gótico</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="renacimiento-barroco/index.html"> Renacimiento y Barroco </a>
+                            </li>
+                            <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="neoclasicismo-romanticismo/index.html">Neoclasicismo y Romanticismo</a>
+                            </li>
+                            <li class="nav-item mi-nav-item">
+                                <a class="nav-link mi-nav-link" href="impresionismo-postimpresionismo/index.html">Impresionismo</a>
+                            </li>
+                            <li class="nav-item mi-nav-item dropdown">
+                                <a class="nav-link mi-nav-link dropdown-toggle" href="arte-moderno-contemporaneo/" role="button" data-bs-toggle="dropdown">
+                                Contemporáneo
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="arte-moderno-contemporaneo/cubismo/index.html">Cubismo</a></li>
+                                    <li><a class="dropdown-item" href="arte-moderno-contemporaneo/arte-digital/index.html">Arte digital</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mi-nav-item">
+                                <div class="icon-with-text-gallery">
+                                    <a class="nav-link text-white pt-2" href="galería/index.html" aria-label="Galería">
+                                        <i class="bi bi-image icon-size"></i>
+                                    </a>
+                                    <span class="icon-text-gallery">Galería</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Encabezado fijo-->
+            <div class="header-content">
+                <div class="header-title-container">
+                    <img src="img/inicio/logo_arteuniversal.png" alt="Logo">
+                </div>
+                <div class="header-buttons">
+                    <a href="contacto.html" class="btn btn-outline-light">CONTACTO</a>
+                    <a href="#" class="btn btn-outline-light">DESARROLLO</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="container py-5 pb-5 flex-grow-1">
+            <div class="desarrollo-content text-center">
+                <h1 class="desarrollo-title mb-4">Acerca de la Desarrolladora</h1>
+                <div class="desarrollo-info mb-5">
+                    <p class="desarrollo-text">Hola, soy **Sofía Pacheco**, una apasionada estudiante de la **Licenciatura en Artes Multimediales** de la **Universidad Nacional de Buenos Aires (UBA)**. Actualmente me encuentro cursando mi **segundo año** y este proyecto ha sido desarrollado como parte del trabajo final para la materia **Informática General**, bajo la cátedra del Prof. Drelichmann.</p>
+                    <p class="desarrollo-text">En el transcurso de la materia, he tenido la oportunidad de adquirir conocimientos fundamentales en el desarrollo web. La base del sitio está construida con **HTML**, **CSS** y **JavaScript**, y para agilizar el proceso y mejorar el diseño, se han utilizado frameworks como **Vue.js** y **Bootstrap**.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Pie de página fijo-->
+        <footer class="mt-5">
+            <address>
+                <p>Página oficial de La Historia del Arte. Para contactarse escribir a <a href="mailto:historiadelarte@gmail.com">historiadelarte@gmail.com</a></p>
+                <p>&copy; 2025. Todos los derechos reservados.</p>
+            </address>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,567 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white !important; /* Establece el color de texto blanco para todo el body */
+}
+
+h1 {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 70px;
+  padding: 20px;
+}
+
+h2,h3{
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 20px;
+}
+
+h1{
+  width: 80%;
+  margin: 0 auto; /*queda centrado*/
+}
+
+p{
+  font-family: "Quicksand", serif;
+}
+
+/* Encabezado FIJO */
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  margin-bottom: -2rem;
+  margin-left: 4rem;
+}
+
+.header-title-container {
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  font-size: 10px;
+}
+
+.header-buttons a { /* Cambiado a 'a' para aplicar a los enlaces */
+  margin-bottom: 10px; /* Aplica solo margen inferior */
+}
+
+/* Despliegue de texto con botones */
+.icon-with-text {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon-text {
+  position: absolute;
+  right: 100%;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo más transparente */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0; /*Se muestra el ícono más no el texto*/
+  transition: opacity 0.3s ease;
+}
+
+.icon-with-text:hover .icon-text {
+  opacity: 1; /*Al pasar el mouse sobre el ícono se hace visible el texto*/
+  size: 10px;
+}
+
+/* Despliegue de texto GALERÍA */
+.icon-with-text-gallery {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-text-gallery {
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0.384);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon-with-text-gallery:hover .icon-text-gallery {
+  opacity: 1;
+}
+
+.icon-size {
+  font-size: 1.2em;
+}
+
+.icon-text{
+  font-size: 1.4em;
+}
+
+/* Menú de Navegación FIJO */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.mi-nav {
+  /* background-color: rgba(75, 75, 75, 0.212); FONDO DE NAV*/
+  width: 100%;
+}
+
+.mi-navbar-nav {
+  display: flex;
+  justify-content: space-between; /* Cambiado a space-between */
+  list-style: none;
+  width: 100%;
+}
+
+.mi-nav-item {
+  margin: 0 1rem;
+}
+
+.mi-nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  color: #f0f0f0;
+  white-space: nowrap; /* Evita que el texto se divida en dos líneas */
+}
+
+.mi-nav-link:hover {
+  color: #969696;
+}
+
+.mi-navbar-toggler {
+  background-color: white;
+  border: none;
+}
+
+.mi-nav-link.active {
+  color: #f0f0f0 !important; /*El !important asegura que este estilo sobrescriba cualquier otro de Bootstrap que esté afectando el color del texto.*/
+}
+
+.mi-nav-link.active:hover {
+  color: #969696 !important;
+}
+
+.dropdown-menu{
+  background-color:  #0000003e;
+}
+.dropdown-item{
+  color:#f0f0f0
+  
+}
+
+  /* Fondo del Body: varía por página */
+
+.fondo-imagen {
+    position: fixed; /* Fija la imagen al viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre todo el viewport */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+  footer {
+    background-color: #0000003e;
+    color:white;
+    padding: 20px 0;
+    display: flex; /* Convierte el footer en un contenedor Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    font-weight: lighter;
+}
+
+footer p {
+    font-size: 14px;
+    text-align: center; /* Centra el texto dentro del párrafo */
+    margin: 0; /* Elimina los márgenes predeterminados del párrafo */
+    padding-top: 1rem;
+}
+
+address a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+address a:hover{
+  color: #b9b9b9;
+}
+
+/* ESTILOS PÁGINA DE INICIO */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 20px;
+}
+
+.art-card {
+  position: relative;
+  min-width: 250px;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.art-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.art-card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px;
+}
+
+.art-card-content {
+  display: none;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ESTILOS: PÁGINA RENACIMIENTO-BARROCO */
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.parallax h2 {
+  font-size: 3rem;
+}
+
+.rotate-card {
+  transition: transform 0.5s ease;
+}
+
+.rotate-card:hover {
+  transform: rotate(5deg);
+}
+
+.baroque-section {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.baroque-card {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.baroque-card:hover {
+  transform: scale(1.05);
+}
+
+/* ESTILOS PÁGINA: NEOCLACISISMO-ROMANTICISMO */
+.timeline-card {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #dee2e6;
+  z-index: -1;
+}
+
+.timeline-card:last-child::before {
+  display: none;
+}
+
+.timeline-card img {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ESTILOS PÁGINA: IMPRESIONISMO-POSTIMPRESIONISMO */
+.art-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.art-panel:hover {
+  transform: translateY(-8px);
+}
+
+.art-panel img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.art-panel:hover img {
+  transform: scale(1.1);
+}
+
+.art-panel-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 2rem;
+}
+
+/* ESTILO PÁGINA: CUBISMO */
+.cubism-section {
+  padding: 5rem 0;
+}
+
+.cubism-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.cubism-image {
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.cubism-image:hover {
+  transform: scale(1.05);
+}
+
+.cubism-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+.cubism-quote {
+  font-style: italic;
+  color: #feffff;
+  margin-top: 2rem;
+}
+
+.cubism-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.cubism-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #dee2e6;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 50%;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) {
+  right: 50%;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -26px;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -26px;
+}
+
+/* ESTILOS PÁGINA: ARTE DIGITAL */
+
+.digital-art-section {
+  padding: 5rem 0;
+}
+
+.digital-art-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fdfdfd;
+  margin-bottom: 2rem;
+}
+
+.digital-art-image {
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.digital-art-image:hover {
+  transform: scale(1.05);
+}
+
+.digital-art-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+.digital-art-quote {
+  font-style: italic;
+  color: #6c757d;
+  margin-top: 2rem;
+}
+
+.digital-art-trends {
+  padding: 2rem 0;
+}
+
+.trend-item {
+  margin-bottom: 2rem;
+}
+
+.trend-item h3 {
+  color: #007bff
+}
+
+/* ESTILOS PÁGINA:GALERÍA */
+.image-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+#galeria img{
+  width: 100%;
+}
+
+#galeria .col-lg-4 {
+  padding: 25px;
+  margin: 0;
+}
+
+#galeria img:hover {
+  border: 5px solid white;
+}
+
+.carousel-item img {
+  height: 400px; /* Define un alto fijo o el que prefieras */
+  object-fit: cover; /* Ajusta la imagen para que se recorte si es necesario */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+@media (max-width: 480px) {
+  #imagenGalería{
+    width: 100%;
+    height: 250px;
+  }
+
+  footer{
+    margin-top: 50px
+  }
+}

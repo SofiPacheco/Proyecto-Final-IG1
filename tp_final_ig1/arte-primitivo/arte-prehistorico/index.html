@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Prehistórico</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <!-- Íconos en Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        main p {
+            font-size: 1.2rem;
+        }
+        /* Estructura prolija para bloques de imagen+texto */
+        .bloque-arte {
+            min-height: 340px;
+        }
+        .bloque-arte .col-md-6 {
+            display: flex;
+            align-items: stretch;
+            padding: 0;
+        }
+        .bloque-arte .texto-bloque {
+            /* Elimina fondo y padding extra */
+            background: none;
+            padding: 0 2rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            font-size: 1rem;
+            box-shadow: none;
+        }
+        .bloque-arte .img-bloque {
+            width: 100%;
+            object-fit: cover;
+            min-height: 380px;
+            max-height: 200px;
+            height: 100%;
+        }
+        /* Para la sección de técnicas y materiales */
+        .tecnica-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            /* Elimina fondo, borde y sombra */
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .tecnica-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .tecnica-card p {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            color: #fff;
+        }
+
+        .tecnicas-materiales-separador {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <img class="fondo-imagen" src="../../img/arte-primitivo/fondo_prehistorico.jpg" alt="Fondo pintura rupestre" width="1000">
+
+    <!-- Menú de Navegación fijo -->
+    <header>
+        <nav class="navbar navbar-expand-lg mi-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html"></a>
+                <button class="navbar-toggler mi-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mi-navbar-nav">
+                        <li class="nav-item mi-nav-item">
+                            <a class="nav-link mi-nav-link" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item mi-nav-item dropdown">
+                            <a class="nav-link mi-nav-link dropdown-toggle active" href="../index.html" role="button" data-bs-toggle="dropdown">
+                                Arte Primitivo
+                            </a>
+                            <ul class="dropdown-menu" data-bs-auto-close="outside">
+                                <li><a class="dropdown-item active" href="#">Arte prehistórico</a></li>
+                                <li><a class="dropdown-item" href="../arte-antiguo/index.html">Arte antiguo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mi-nav-item dropdown">
+                            <a class="nav-link mi-nav-link dropdown-toggle" href="../../arte-medieval/" role="button" data-bs-toggle="dropdown">
+                                Arte Medieval
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../arte-medieval/arte-romanico/index.html">Arte románico</a></li>
+                                <li><a class="dropdown-item" href="../../arte-medieval/arte-gotico/index.html">Arte gótico</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mi-nav-item">
+                            <a class="nav-link mi-nav-link" href="../../renacimiento-barroco/index.html"> Renacimiento y Barroco </a>
+                        </li>
+                        <li class="nav-item mi-nav-item">
+                            <a class="nav-link mi-nav-link" href="../../neoclasicismo-romanticismo/index.html">Neoclasicismo y Romanticismo</a>
+                        </li>
+                        <li class="nav-item mi-nav-item">
+                            <a class="nav-link mi-nav-link" href="../../impresionismo-postimpresionismo/index.html">Impresionismo</a>
+                        </li>
+                        <li class="nav-item mi-nav-item dropdown">
+                            <a class="nav-link mi-nav-link dropdown-toggle" href="../../arte-moderno-contemporaneo/" role="button" data-bs-toggle="dropdown">
+                             Contemporáneo
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../arte-moderno-contemporaneo/cubismo/index.html">Cubismo</a></li>
+                                <li><a class="dropdown-item" href="../../arte-moderno-contemporaneo/arte-digital/index.html">Arte digital</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mi-nav-item">
+                            <div class="icon-with-text-gallery">
+                                <a class="nav-link text-white pt-2" href="../../galería/index.html" aria-label="Galería">
+                                    <i class="bi bi-image icon-size"></i>
+                                </a>
+                                <span class="icon-text-gallery">Galería</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>            
+
+        <!-- Encabezado fijo-->
+        <div class="header-content">
+            <div class="header-title-container">
+                <a href="../../index.html">
+                    <img src="../../img/inicio/logo_arteuniversal.png" alt="Logo">
+                </a>
+            </div>
+            <div class="header-buttons">
+                <div class="icon-with-text">
+                    <a href="../../contacto.html" class="btn btn-outline-light" aria-label="Contacto">
+                        <i class="bi bi-envelope icon-size"></i>
+                    </a>
+                    <span class="icon-text">Contacto</span>
+                </div>
+                <div class="icon-with-text">
+                    <a href="../../desarrollo.html" class="btn btn-outline-light" aria-label="Desarrollo">
+                        <i class="bi bi-tools icon-size"></i>
+                    </a>
+                    <span class="icon-text">Desarrollo</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido variable-->
+    <main>
+        <div class="container my-5">
+            <h1 class="text-center">Arte Prehistórico</h1>
+            <h2 class="text-center mb-4" style="font-size:1.5rem; font-weight:400;">Un Viaje a los Orígenes de la Expresión Humana</h2>
+            <p class="text-center">El arte prehistórico, que abarca desde los primeros comienzos de la humanidad hasta la invención de la escritura, es un testimonio fascinante de la capacidad creativa del ser humano y su necesidad de comunicarse y expresar su visión del mundo. Este arte, que se extiende a lo largo de milenios, permite vislumbrar la vida, las creencias y las inquietudes de nuestros antepasados.</p>
+
+            <!-- PALEOLÍTICO -->
+            <section class="mt-5">
+                <h2 class="mb-4">Paleolítico: Los Primeros Pasos del Arte (30.000 - 10.000 a. C.)</h2>
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-6">
+                        <div class="texto-bloque">
+                            <p><strong>El Paleolítico</strong>, la época más antigua de la Prehistoria, fue testigo de las primeras manifestaciones artísticas de la humanidad. El arte paleolítico se caracteriza por su realismo y su conexión con la naturaleza, y se manifiesta principalmente en dos formas:</p>
+                            <p><strong>Arte rupestre:</strong> Las paredes de cuevas como Altamira (España) y Lascaux (Francia) se convirtieron en lienzos para plasmar imágenes de animales, figuras humanas y símbolos abstractos. Estas pinturas, realizadas con pigmentos naturales como el carbón y el ocre, nos revelan la importancia de la caza y la conexión del ser humano con su entorno. Se cree que el arte rupestre podría estar relacionado con rituales de caza o con la necesidad de representar y controlar el mundo natural.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../../img/arte-primitivo/arte_paleolitico.jpg" alt="Arte Paleolítico" class="img-bloque">
+                    </div>
+                    <p ><strong>Arte mobiliar:</strong> Pequeñas esculturas y objetos decorativos, como las Venus paleolíticas, que podrían estar relacionadas con la fertilidad y la magia. Estas figuras femeninas, con formas exageradas y rasgos simbólicos, nos sugieren la importancia de la mujer y la reproducción en las sociedades paleolíticas.</p>
+                </div>
+            </section>
+
+            <!-- MESOLÍTICO -->
+            <section class="mt-5">
+                <h2 class="mb-4">Mesolítico: Nuevas Formas de Expresión (10.000 - 8.000 a. C.)</h2>
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-6 order-md-2">
+                        <div class="texto-bloque text-end">
+                            <p>El Mesolítico, un período de transición entre el Paleolítico y el Neolítico, fue testigo de cambios importantes en el arte prehistórico. <br> El arte rupestre se vuelve más esquemático <br> y geométrico, con representaciones de escenas <br> de caza y recolección que nos muestran <br> la evolución de las sociedades humanas. <br> El arte mobiliar continúa la producción de objetos decorativos, con nuevas formas y diseños <br> que reflejan los cambios culturales y sociales.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <img src="../../img/arte-primitivo/arte_mesolitico.jpg" alt="Arte Mesolítico" class="img-bloque">
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEOLÍTICO -->
+            <section class="mt-5">
+                <h2 class="mb-4">Neolítico: Revolución y Arte Megalítico (8.000 - 3.000 a. C.)</h2>
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-6">
+                        <div class="texto-bloque">
+                            <p>El Neolítico, marcado por la invención de la agricultura y la sedentarización de las sociedades humanas, trajo consigo nuevas formas de expresión artística. <br> El arte rupestre se desarrolla en el arte levantino, con escenas de la vida cotidiana y figuras humanas más estilizadas. <br> El arte megalítico, con construcciones como los dólmenes y menhires, que podrían tener un significado funerario o ritual. La cerámica, inventada en esta época, se convierte en un nuevo medio de expresión artística, con vasijas y figuras decorativas que reflejan la creatividad y la habilidad técnica de las sociedades neolíticas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../../img/arte-primitivo/arte_neolitico.jpg" alt="Arte Neolítico" class="img-bloque">
+                    </div>
+                </div>
+            </section>
+
+            <!-- TÉCNICAS Y MATERIALES -->
+            <section class="mt-4">
+                <h2 class="mb-4 mt-5">Técnicas y Materiales</h2>
+                <p class="tecnicas-materiales-separador">
+                    Las técnicas y los materiales utilizados en el arte prehistórico variaban según la época y la región. Se utilizaban pigmentos naturales como el carbón, el ocre y el óxido de manganeso, que se mezclaban con agua o grasa animal y se aplicaban directamente sobre la roca o en objetos. Para crear volumen y profundidad, se utilizaban técnicas como el sombreado y el difuminado. En el Neolítico, se desarrolló la cerámica, lo que permitió crear nuevas formas de expresión artística. Se utilizaban diferentes tipos de arcilla y técnicas de cocción para crear vasijas, figuras y otros objetos decorativos.
+                </p>
+                <div class="row g-4">
+                    <div class="col-md-4 mt-4">
+                        <div class="tecnica-card h-100">
+                            <img src="../../img/arte-primitivo/dolmen.jpg" alt="Técnica 1">
+                            <p class="small">Monumentos megalíticos utilizados como tumbas colectivas</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tecnica-card h-100">
+                            <img src="../../img/arte-primitivo/herramientas.jpg" alt="Técnica 2">
+                            <p class="small">Recreación de las herramientas utilizadas</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tecnica-card h-100">
+                            <img src="../../img/arte-primitivo/diosa.png" alt="Técnica 3">
+                            <p class="small">Diosa madre con piernas cruzadas</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-5">
+                <h2 class="mb-4">Descubrimiento y Estudio</h2>
+                <p>El arte prehistórico fue descubierto de forma gradual a lo largo del siglo XIX y XX. Uno de los hallazgos más importantes fue el de las cuevas de Altamira en España en 1879, cuyas pinturas rupestres fueron inicialmente consideradas falsificaciones debido a su increíble realismo y conservación. El estudio del arte prehistórico ha avanzado mucho en las últimas décadas, gracias a nuevas técnicas de datación y análisis, así como a la investigación de los contextos arqueológicos y culturales.</p>
+            </section>
+
+            <section class="mt-5">
+                <h4>El arte prehistórico es un legado invaluable de nuestros antepasados, que nos permite conocer su mundo, sus creencias y su capacidad creativa. Este arte, que se extiende a lo largo de milenios, nos invita a reflexionar sobre nuestros orígenes y sobre la naturaleza humana.</h4>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página fijo-->
+    <footer class="mt-5">
+        <address>
+            <p>Página oficial de La Historia del Arte. Para contactarse escribir a <a href="mailto:historiadelarte@gmail.com">historiadelarte@gmail.com</a></p>
+            <p>&copy; 2025. Todos los derechos reservados.</p>
+        </address>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
