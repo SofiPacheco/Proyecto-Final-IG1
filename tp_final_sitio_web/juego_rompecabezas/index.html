@@ -15,7 +15,8 @@
 </head>
 <body>
     <div id="app" class="main-container">
-        <div class="intro-screen" v-if="!gameStarted">
+        <div class="intro-screen" v-if="!gameStarted"> 
+            <!--  Pantalla de introducción aparece si el juego aun no se ha iniciado -->
             <header>
                 <nav class="navbar navbar-expand-lg mi-nav">
                     <div class="container-fluid">
@@ -93,7 +94,7 @@
                         </p>
                     </div>
                     <button class="play-button btn btn-primary btn-lg mt-3" @click="startGame">
-                        <i class="bi bi-play-fill"></i>
+                        <i class="bi bi-play-fill"></i> <!-- ícono -->
                         Comenzar Juego
                     </button>
                 </div>
@@ -106,14 +107,14 @@
             </footer>
         </div>
 
-        <div class="game-screen" v-else>
-            <div class="game-container" @mouseup="dragEnd">
-                <div class="pieces-side left">
-                    <div class="puzzle-piece" v-for="piece in unplacedPiecesLeft" :key="piece.id" :style="getPoolPieceStyle(piece)" @mousedown="dragStart($event, piece)"></div>
+        <div class="game-screen" v-else> <!--Pantalla del juego aparece si el juego ya ha comenzado-->
+            <div class="game-container" @mouseup="dragEnd"> <!-- Contenedor del juego -->
+                <div class="pieces-side left"> <!-- Lado izquierdo para piezas no colocadas -->
+                    <div class="puzzle-piece" v-for="piece in unplacedPiecesLeft" :key="piece.id" :style="getPoolPieceStyle(piece)" @mousedown="dragStart($event, piece)"></div> <!-- Piezas no colocadas -->
                 </div>
-                <div class="game-frame">
-                    <div v-if="showFullImage" class="game-full-image-overlay" @click="hideFullImageAndStartPuzzle">
-                        <img :src="imageSrc" alt="Imagen Completa del Rompecabezas" class="full-puzzle-image">
+                <div class="game-frame"> <!-- Marco del juego -->
+                    <div v-if="showFullImage" class="game-full-image-overlay" @click="hideFullImageAndStartPuzzle"> <!-- Capa de imagen completa -->
+                        <img :src="currentPuzzle.imageSrc" alt="Imagen Completa del Rompecabezas" class="full-puzzle-image">
                         <div class="click-to-start">Haz clic para comenzar</div>
                     </div>
                     
@@ -131,15 +132,17 @@
                         <div class="game-win-message-content">
                             <h2 class="win-title">¡Felicitaciones!</h2>
                             <p class="artwork-info">
-                                La Noche Estrellada - Vincent van Gogh
+                                {{ currentPuzzle.artworkInfo.title }} - {{ currentPuzzle.artworkInfo.artist }}
                             </p>
                             <p class="artwork-era">
-                                Obra postimpresionista
+                                Obra de {{ currentPuzzle.artworkInfo.year }}, perteneciente al {{ currentPuzzle.artworkInfo.era }}
                             </p>
                             <p class="artwork-fun-fact">
-                                <em>"La pintura fue realizada desde la ventana del hospital psiquiátrico en donde se encontraba recluido el artista, en Saint-Rémy, Francia, utilizando su imaginación como modelo ya que no tenía acceso real a dicha vista.&nbsp;La obra se considera una expresión de la turbulencia emocional de Van Gogh, con los remolinos en el cielo representando sus sentimientos"</em>
+                                <em>"{{ currentPuzzle.artworkInfo.funFact }}"</em>
                             </p>
-                            <button class="play-button mt-3" @click="initializePuzzle">Volver a Jugar</button>
+                            <button class="play-button mt-3" @click="nextPuzzle">
+                                {{ currentPuzzleIndex < puzzles.length - 1 ? 'Siguiente Obra' : 'Volver a Jugar' }}
+                            </button>
                         </div>
                     </div>
                 </div>

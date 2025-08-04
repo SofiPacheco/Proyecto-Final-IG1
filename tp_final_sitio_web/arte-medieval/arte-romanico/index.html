@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Románico</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <!-- Íconos en Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        main p {
+            font-size: 1.15rem;
+        }
+        .bloque-arte {
+            min-height: 300px;
+        }
+        .bloque-arte .col-md-6 {
+            display: flex;
+            align-items: stretch;
+            padding: 0;
+        }
+        .bloque-arte .texto-bloque {
+            background: none;
+            padding: 0 2rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            font-size: 1.05rem;
+            box-shadow: none;
+        }
+        .bloque-arte .img-bloque {
+            width: 100%;
+            object-fit: cover;
+            min-height: 220px;
+            max-height: 340px;
+            height: 100%;
+        }
+        .tecnica-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .tecnica-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .tecnica-card p {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            color: #fff;
+        }
+        .tecnicas-materiales-separador {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <img class="fondo-imagen" src="../../img/arte-medieval/fondo_romanico.jpg" alt="Fondo pintura románica" width="1000">
+
+    <!-- Encabezado principal -->
+    <header>
+        <!-- Navegación principal -->
+        <nav class="navbar navbar-expand-lg mi-nav" role="navigation" aria-label="Navegación principal">
+            <div class="container-fluid">
+                <button class="navbar-toggler mi-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mi-navbar-nav">
+                        <li class="nav-item mi-nav-item">
+                            <a class="nav-link mi-nav-link" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item mi-nav-item dropdown">
+                            <a class="nav-link mi-nav-link dropdown-toggle" href="../../arte-primitivo/index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Arte Primitivo
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../arte-primitivo/arte-prehistorico/index.html">Arte prehistórico</a></li>
+                                <li><a class="dropdown-item" href="../../arte-primitivo/arte-antiguo/index.html">Arte antiguo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mi-nav-item dropdown">
+                            <a class="nav-link mi-nav-link dropdown-toggle active" href="../index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                                Arte Medieval
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="#" aria-current="page">Arte románico</a></li>
+                                <li><a class="dropdown-item" href="../arte-gotico/index.html">Arte gótico</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mi-nav-item">
+                            <a class="nav-link mi-nav-link" href="../../renacimiento-barroco/index.html">Renacimiento y Barroco</a>
+                        </li>
+                        <li class="nav-item mi-nav-item">
+                            <a class="nav-link mi-nav-link" href="../../neoclasicismo-romanticismo/index.html">Neoclasicismo y Romanticismo</a>
+                        </li>
+                        <li class="nav-item mi-nav-item">
+                            <a class="nav-link mi-nav-link" href="../../impresionismo-postimpresionismo/index.html">Impresionismo</a>
+                        </li>
+                        <li class="nav-item mi-nav-item dropdown">
+                            <a class="nav-link mi-nav-link dropdown-toggle" href="../../arte-moderno-contemporaneo/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Contemporáneo
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../arte-moderno-contemporaneo/cubismo/index.html">Cubismo</a></li>
+                                <li><a class="dropdown-item" href="../../arte-moderno-contemporaneo/arte-digital/index.html">Arte digital</a></li>
+                            </ul>
+                        </li>
+                          <li class="nav-item mi-nav-item">
+                            <div class="icon-with-text-gallery">
+                                <a class="nav-link text-white pt-2" href="../../galería/index.html" aria-label="Galería">
+                                    <i class="bi bi-image icon-size"></i>
+                                </a>
+                                <span class="icon-text-gallery">Galería</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+         <!-- Encabezado fijo-->
+            <div class="header-content">
+                <div class="header-title-container">
+                    <a href="../../index.html">
+                    <img src="../../img/inicio/logo_arteuniversal.png" alt="Logo">
+                </div>
+                <div class="header-buttons">
+                    <div class="icon-with-text">
+                        <a href="../contacto.html" class="btn btn-outline-light" aria-label="Contacto">
+                            <i class="bi bi-envelope icon-size"></i>
+                        </a>
+                        <span class="icon-text">Contacto</span>
+                    </div>
+                    <div class="icon-with-text">
+                        <a href="../desarrollo.html" class="btn btn-outline-light" aria-label="Desarrollo">
+                            <i class="bi bi-tools icon-size"></i>
+                        </a>
+                        <span class="icon-text">Desarrollo</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <div class="container my-5">
+            <h1 class="text-center mb-1">Arte Románico</h1>
+            <h2 class="text-center mb-4 mt-0" style="font-size:1.5rem; font-weight:400; line-height:1.2;">Un Puente entre la Antigüedad y el Gótico</h2>
+            <p class="text-center">El Arte Románico, que floreció en Europa durante la Edad Media (siglos XI-XIII), es un estilo artístico que fusiona elementos de la tradición romana con influencias de otras culturas, como la germánica y la bizantina. Este arte, que se manifestó principalmente en la arquitectura religiosa, se caracteriza por su solidez, su simbolismo y su función didáctica.</p>
+
+            <!-- ARQUITECTURA ROMÁNICA -->
+            <section class="mt-5">
+                <h2 class="mb-4">Arquitectura Románica: La Expresión de la Fe en Piedra</h2>
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-6">
+                        <div class="texto-bloque">
+                            <p>La arquitectura románica se caracteriza por el uso de materiales como la piedra y el ladrillo, así como por la solidez y la monumentalidad de sus construcciones. Los edificios románicos, principalmente iglesias y monasterios, se construyen siguiendo un esquema basilical o de cruz latina, con una nave central y dos naves laterales, un crucero y un ábside.</p>
+                            <p>Uno de los elementos más característicos de la arquitectura románica es el arco de medio punto, que se utiliza para cubrir espacios y soportar el peso de la estructura. Otros elementos arquitectónicos importantes son la bóveda de cañón, la bóveda de arista y la cúpula.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../../img/arte-primitivo/arquitectura_roma.jpg" alt="Ejemplo de arquitectura románica con arcos de medio punto y construcción sólida" class="img-bloque">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ESCULTURA ROMÁNICA -->
+            <section class="mt-5">
+                <h2 class="mb-4">Escultura Románica: El Lenguaje de la Imagen</h2>
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-6 order-md-2">
+                        <div class="texto-bloque text-end">
+                            <p>La escultura románica, que decora portadas, capiteles y muros de iglesias y monasterios, es una de las manifestaciones más destacadas de este estilo artístico. Se caracteriza por su expresividad y su simbolismo, y se centra en la representación de escenas bíblicas y figuras religiosas.</p>
+                            <p>Los escultores románicos utilizaban diversas técnicas, como el relieve y el bulto redondo, y trabajaban con materiales como la piedra y la madera. Las esculturas románicas suelen ser de gran tamaño y se adaptan a la forma del soporte arquitectónico al que están adosadas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <img src="../../img/galería/arte_romanico1.jpg" alt="Escultura románica en portada de iglesia con figuras religiosas talladas en piedra" class="img-bloque">
+                    </div>
+                </div>
+            </section>
+
+            <!-- PINTURA ROMÁNICA -->
+            <section class="mt-5">
+                <h2 class="mb-4">Pintura Románica: El Color como Vehículo de la Fe</h2>
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-6">
+                        <div class="texto-bloque">
+                            <p>La pintura románica, que decora muros y ábsides de iglesias y monasterios, se caracteriza por su estilo plano y su uso de colores vivos. Los pintores románicos utilizaban técnicas como el fresco y la pintura sobre tabla, y representaban escenas bíblicas y figuras religiosas.</p>
+                            <p>La pintura románica, al igual que la escultura, tenía una función didáctica y buscaba transmitir mensajes religiosos a los fieles. Los colores vivos y las formas estilizadas de las figuras buscaban impactar al espectador y facilitar la comprensión de las escenas representadas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../../img/galería/arte_romanico2.jpg" alt="Pintura mural románica con colores vivos y figuras estilizadas" class="img-bloque">
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTEXTO HISTÓRICO Y CULTURAL -->
+            <section class="mt-5">
+                <h2 class="mb-4">Contexto Histórico y Cultural</h2>
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-6 order-md-2">
+                        <div class="texto-bloque text-end">
+                            <p>El Arte Románico surge en un contexto histórico y cultural marcado por la consolidación del feudalismo y el fortalecimiento de la Iglesia. La construcción de iglesias y monasterios se convierte en una de las principales manifestaciones del poder religioso y político de la época.</p>
+                            <p>El Arte Románico también refleja el espíritu de las Cruzadas y la expansión del cristianismo por Europa. Las iglesias y los monasterios se convierten en centros de peregrinación y difusión de la cultura y el conocimiento.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <img src="../../img/galería/arte_romanico3.jpg" alt="Monasterio románico mostrando el contexto religioso y cultural de la época" class="img-bloque">
+                    </div>
+                </div>
+            </section>
+
+            <!-- LEGADO -->
+            <section class="mt-5">
+                <h2 class="mb-4">Legado del Arte Románico</h2>
+                <p>El Arte Románico dejó un legado importante en la historia del arte occidental. Su influencia se puede apreciar en estilos artísticos posteriores, como el Gótico y el Renacimiento.</p>
+                <p>El Románico también nos legó un rico patrimonio arquitectónico, escultórico y pictórico, que podemos admirar en numerosas iglesias y monasterios de toda Europa. Este arte, que nos habla de la fe, la cultura y la sociedad de la Edad Media, sigue siendo una fuente de inspiración y admiración en la actualidad.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <address>
+            <p>Página oficial de La Historia del Arte</p>
+            <p>Para contactarse escribir a <a href="mailto:historiadelarte@gmail.com">historiadelarte@gmail.com</a></p>
+            <p>&copy; 2025. Todos los derechos reservados.</p>
+        </address>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

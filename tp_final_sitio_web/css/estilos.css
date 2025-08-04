@@ -14,6 +14,8 @@ h1 {
   text-align: center;
   font-size: 70px;
   padding: 20px;
+   width: 80%;
+  margin: 0 auto; /*queda centrado*/
 }
 
 h2,h3{
@@ -22,11 +24,6 @@ h2,h3{
   font-style: normal;
   text-align: center;
   padding: 20px;
-}
-
-h1{
-  width: 80%;
-  margin: 0 auto; /*queda centrado*/
 }
 
 p{
@@ -566,3 +563,218 @@ address a:hover{
   }
 }
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+main {
+    flex: 1;
+}
+.fondo-imagen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+/* Estilos específicos para móviles */
+@media (max-width: 991.98px) {
+    /* ... (resto del código de @media) ... */
+
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 1040;
+        padding-top: 70px;
+    }
+    .mi-nav-item.dropdown .dropdown-menu {
+        position: static;
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .mi-nav-item.dropdown .dropdown-menu li .dropdown-item {
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Estilos para móviles y tablets (hasta 991.98px) */
+@media (max-width: 991.98px) {
+    /* Encabezado: Títulos más pequeños y logo centrado */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .header-title-container {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    
+    .header-buttons {
+        align-items: center;
+        flex-direction: row;
+        margin-top: 1rem;
+        padding-top: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .header-buttons a {
+        margin: 0 5px;
+        font-size: 1rem;
+    }
+
+    /* Navegación (menú hamburguesa) */
+    .mi-nav {
+        width: auto;
+    }
+    
+    .mi-navbar-toggler {
+        display: block;
+        margin-left: auto;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1041;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1040;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+    .mi-navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 20px;
+    }
+    
+    .mi-nav-item {
+        margin: 0.3rem 0;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .mi-nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    /* Dropdown del menú hamburguesa */
+    .mi-nav-item.dropdown .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+    }
+
+    /* Oculta el menú por defecto */
+    .mi-nav-item.dropdown .dropdown-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Muestra el menú solo cuando el padre tiene la clase 'show' */
+    .mi-nav-item.dropdown.show .dropdown-menu {
+        display: block;
+    }
+
+    .mi-nav-item.dropdown .dropdown-menu li .dropdown-item {
+        color: #fff;
+        padding: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: left;
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+    
+    .mi-nav-item.dropdown .dropdown-menu li:last-child .dropdown-item {
+        border-bottom: none;
+    }
+    
+    .mi-nav-link.active {
+        color: #f0f0f0 !important;
+    }
+    
+    .mi-nav-link.active:hover {
+        color: #969696 !important;
+    }
+
+    /* Galería */
+    #imagenGalería {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Pie de página */
+    footer {
+        margin-top: 50px;
+    }
+}

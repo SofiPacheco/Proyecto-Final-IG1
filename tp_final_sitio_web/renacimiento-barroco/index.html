@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Renacimiento y Barroco</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- Íconos en Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        main p {
+            font-size: 1.15rem;
+        }
+        .bloque-arte {
+            min-height: 300px;
+        }
+        .bloque-arte .col-md-6 {
+            display: flex;
+            align-items: stretch;
+            padding: 0;
+        }
+        .bloque-arte .texto-bloque {
+            background: none;
+            padding: 0 2rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            font-size: 1.05rem;
+            box-shadow: none;
+        }
+        .bloque-arte .img-bloque {
+            width: 100%;
+            object-fit: cover;
+            min-height: 220px;
+            max-height: 340px;
+            height: 100%;
+        }
+        .tecnica-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .tecnica-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .tecnica-card p {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            color: #fff;
+        }
+        .tecnicas-materiales-separador {
+            margin-bottom: 2rem;
+        }
+    </style>
+   </head>
+
+   <body>
+       <img class="fondo-imagen" src="../img/renacimiento-barroco/fondo_romantisismo.jpg" alt="Fondo de pintura del Renacimiento" width="1000">
+       <!-- Menú de Navegación fijo -->
+       <header>
+           <nav class="navbar navbar-expand-lg mi-nav">
+               <div class="container-fluid">
+                   <a class="navbar-brand" href="../index.html"></a>
+                   <button class="navbar-toggler mi-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                       <ul class="navbar-nav mi-navbar-nav">
+                           <li class="nav-item mi-nav-item">
+                               <a class="nav-link mi-nav-link" href="../index.html">Inicio</a>
+                           </li>
+                           <li class="nav-item mi-nav-item dropdown">
+                               <a class="nav-link mi-nav-link dropdown-toggle" href="../arte-primitivo/index.html" role="button" data-bs-toggle="dropdown">
+                                   Arte Primitivo
+                               </a>
+                               <ul class="dropdown-menu" data-bs-auto-close="outside">
+                                   <li><a class="dropdown-item" href="../arte-primitivo/arte-prehistorico/index.html">Arte prehistórico</a></li>
+                                   <li><a class="dropdown-item" href="../arte-primitivo/arte-antiguo/index.html">Arte antiguo</a></li>
+                               </ul>
+                           </li>
+                           <li class="nav-item mi-nav-item dropdown">
+                               <a class="nav-link mi-nav-link dropdown-toggle" href="../arte-medieval/" role="button" data-bs-toggle="dropdown">
+                                   Arte Medieval
+                               </a>
+                               <ul class="dropdown-menu">
+                                   <li><a class="dropdown-item" href="../arte-medieval/arte-romanico/index.html">Arte románico</a></li>
+                                   <li><a class="dropdown-item" href="../arte-medieval/arte-gotico/index.html">Arte gótico</a></li>
+                               </ul>
+                           </li>
+                           <li class="nav-item mi-nav-item">
+                               <a class="nav-link mi-nav-link active" href="../renacimiento-barroco/index.html">Renacimiento y Barroco</a>
+                           </li>
+                           <li class="nav-item mi-nav-item">
+                               <a class="nav-link mi-nav-link" href="../neoclasicismo-romanticismo/index.html">Neoclasicismo y Romanticismo</a>
+                           </li>
+                           <li class="nav-item mi-nav-item">
+                               <a class="nav-link mi-nav-link" href="../impresionismo-postimpresionismo/index.html">Impresionismo</a>
+                           </li>
+                           <li class="nav-item mi-nav-item dropdown">
+                               <a class="nav-link mi-nav-link dropdown-toggle" href="../arte-moderno-contemporaneo/" role="button" data-bs-toggle="dropdown">
+                                Contemporáneo
+                               </a>
+                               <ul class="dropdown-menu">
+                                   <li><a class="dropdown-item" href="../arte-moderno-contemporaneo/cubismo/index.html">Cubismo</a></li>
+                                   <li><a class="dropdown-item" href="../arte-moderno-contemporaneo/arte-digital/index.html">Arte digital</a></li>
+                               </ul>
+                           </li>
+                           <li class="nav-item mi-nav-item">
+                               <div class="icon-with-text-gallery">
+                                   <a class="nav-link text-white pt-2" href="../galería/index.html" aria-label="Galería">
+                                       <i class="bi bi-image icon-size"></i>
+                                   </a>
+                                   <span class="icon-text-gallery">Galería</span>
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+           </nav>
+
+           <!-- Encabezado fijo-->
+            <div class="header-content">
+                <div class="header-title-container">
+                    <a href="../index.html">
+                    <img src="../img/inicio/logo_arteuniversal.png" alt="Logo">
+                </div>
+                <div class="header-buttons">
+                    <div class="icon-with-text">
+                        <a href="../contacto.html" class="btn btn-outline-light" aria-label="Contacto">
+                            <i class="bi bi-envelope icon-size"></i>
+                        </a>
+                        <span class="icon-text">Contacto</span>
+                    </div>
+                    <div class="icon-with-text">
+                        <a href="../desarrollo.html" class="btn btn-outline-light" aria-label="Desarrollo">
+                            <i class="bi bi-tools icon-size"></i>
+                        </a>
+                        <span class="icon-text">Desarrollo</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <div class="container my-5">
+            <h1 class="text-center mb-1">Renacimiento y Barroco</h1>
+            <h2 class="text-center mb-4 mt-0" style="font-size:1.5rem; font-weight:400; line-height:1.2;">Del Humanismo a la Exuberancia</h2>
+            <p class="text-center">El Renacimiento y el Barroco representan dos momentos culminantes del arte occidental. El Renacimiento (siglos XV-XVI) marcó el renacer de la cultura clásica y el humanismo, mientras que el Barroco (siglos XVII-XVIII) se caracterizó por su dramatismo, movimiento y exuberancia emocional.</p>
+
+            <!-- RENACIMIENTO -->
+            <section class="mt-5">
+                <div class="row bloque-arte g-0 align-items-center">
+                    <div class="col-md-6">
+                        <div class="texto-bloque">
+                            <h2>Renacimiento: El Renacer del Arte Clásico</h2>
+                            <p>El Renacimiento italiano marcó una revolución artística sin precedentes. Los artistas redescubrieron las técnicas clásicas y desarrollaron la perspectiva, el sfumato y el claroscuro. La figura humana se convirtió en el centro del arte, reflejando los ideales humanistas de la época.</p>
+                            <p>Leonardo da Vinci, Miguel Ángel y Rafael Sanzio fueron los grandes maestros que definieron este período. Sus obras combinaban la perfección técnica con una profunda comprensión de la anatomía humana y la naturaleza, creando un arte que buscaba la belleza ideal y la armonía perfecta.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../img/renacimiento-barroco/obra_renacentista.jpg" alt="Arquitectura Renacentista" class="img-bloque rounded shadow">
+                    </div>
+                </div>
+            </section>
+
+            <!-- PINTURA RENACENTISTA -->
+            <section class="mt-5">
+                <div class="row bloque-arte g-0 align-items-center flex-row-reverse">
+                    <div class="col-md-6">
+                        <div class="texto-bloque">
+                            <h2>Pintura Renacentista</h2>
+                            <h3>La Perspectiva y el Realismo</h3>
+                            <p>La pintura renacentista revolucionó la representación artística con la introducción de la perspectiva lineal y aérea. Los artistas lograron crear ilusiones de profundidad y volumen nunca antes vistas, utilizando técnicas como el sfumato de Leonardo y el uso magistral de la luz.</p>
+                            <p>Las obras maestras como "La Gioconda", "La Escuela de Atenas" y la Capilla Sixtina demuestran la perfección técnica alcanzada. Los temas se diversificaron incluyendo mitología, retratos y escenas cotidianas, además de los tradicionales temas religiosos.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../img/galería/arte_barroco_renacentista2.jpg" alt="Pintura Renacentista" class="img-bloque rounded shadow">
+                    </div>
+                </div>
+            </section>
+
+            <!-- BARROCO -->
+            <section class="mt-5">
+                <div class="row bloque-arte g-0 align-items-center">
+                    <div class="col-md-6">
+                        <div class="texto-bloque">
+                            <h2>Barroco: El Arte del Movimiento y la Emoción</h2>
+                            <p>El Barroco surgió como respuesta a la Contrarreforma católica, buscando emocionar y conmover a los fieles a través del arte. Se caracterizó por el dinamismo, los contrastes dramáticos de luz y sombra, y la exuberancia decorativa que creaba efectos teatrales impactantes.</p>
+                            <p>Caravaggio revolucionó la pintura con su técnica del claroscuro, mientras que Bernini transformó la escultura con obras que parecían desafiar las leyes de la física. La arquitectura barroca, con sus líneas curvas y decoración profusa, creaba espacios que envolvían al espectador en una experiencia sensorial total.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../img/galería/arte_barroco_renacentista3.jpg" alt="Arquitectura Barroca" class="img-bloque rounded shadow">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ESCULTURA BARROCA -->
+            <section class="mt-5">
+                <div class="row bloque-arte g-0 align-items-center flex-row-reverse">
+                    <div class="col-md-6">
+                        <div class="texto-bloque">
+                            <h2>Escultura Barroca</h2>
+                            <h3>La Piedra Cobra Vida</h3>
+                            <p>La escultura barroca alcanzó niveles de virtuosismo técnico extraordinarios. Gian Lorenzo Bernini fue el maestro indiscutible, capaz de tallar el mármol como si fuera cera, creando texturas que imitaban telas, cabellos y piel con un realismo asombroso.</p>
+                            <p>Obras como "El Éxtasis de Santa Teresa" o "Apolo y Dafne" muestran figuras en pleno movimiento, capturando el momento exacto de la transformación. La escultura barroca no solo representaba, sino que narraba historias completas cargadas de dramatismo y emoción.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../img/renacimiento-barroco/escultura_barroca.jpg" alt="Escultura Barroca" class="img-bloque rounded shadow">
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTEXTO HISTÓRICO Y CULTURAL -->
+            <section class="mt-5">
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-12">
+                        <div class="texto-bloque">
+                            <h2>Contexto Histórico y Cultural</h2>
+                            <p>El Renacimiento coincidió con el florecimiento de las ciudades-estado italianas, el mecenazgo de familias poderosas como los Médici, y el redescubrimiento de textos clásicos. Este contexto favoreció una nueva visión del mundo centrada en el ser humano y sus capacidades.</p>
+                            <p>El Barroco, por su parte, surgió en un período de crisis religiosa y política. La Iglesia Católica utilizó el arte como herramienta de propaganda, mientras que las monarquías absolutas emplearon la magnificencia artística para demostrar su poder y legitimidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LEGADO -->
+            <section class="mt-5">
+                <div class="row bloque-arte g-0">
+                    <div class="col-md-12">
+                        <div class="texto-bloque">
+                            <h2>Legado del Renacimiento y el Barroco</h2>
+                            <p>El Renacimiento estableció los fundamentos del arte occidental moderno, con sus innovaciones técnicas y su enfoque humanista que perduran hasta hoy. Sus principios de proporción, perspectiva y estudio de la naturaleza siguen siendo fundamentales en la educación artística.</p>
+                            <p>El Barroco, por su parte, nos legó una concepción del arte como experiencia total, donde arquitectura, escultura, pintura y artes decorativas se combinan para crear ambientes que involucran todos los sentidos. Su influencia se extiende desde el arte hasta el teatro, la música y la literatura, definiendo una estética de la grandiosidad y la emoción que resurge periódicamente en la historia del arte.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página fijo-->
+    <footer class="mt-5">
+        <address>
+            <p>Página oficial de La Historia del Arte. Para contactarse escribir a <a href="mailto:historiadelarte@gmail.com">historiadelarte@gmail.com</a></p>
+            <p>&copy; 2025. Todos los derechos reservados.</p>
+        </address>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
